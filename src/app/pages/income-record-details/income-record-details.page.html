@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Income Record Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="title" [(ngModel)] = "incomeRecord.incometitle"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input required type="text" placeholder="describtion" [(ngModel)] = "incomeRecord.incomedec"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input required type="number" placeholder="amount" [(ngModel)] = "incomeRecord.incomeAmount"> </ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="saveIncomeReport()">Save Income Record</ion-button>
+
+
+  </ion-list>
+</ion-content>

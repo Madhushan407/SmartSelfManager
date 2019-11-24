@@ -1,0 +1,7 @@
+{
+  "name": "SmartSelfManager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

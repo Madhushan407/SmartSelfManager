@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="secondary">
+    <ion-card-header>     
+      <ion-card-title>Income Record</ion-card-title>
+      <ion-card-subtitle>Rs 100 000.00</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="success">
+      <ion-card-header>     
+        <ion-card-title>Total of daily payments</ion-card-title>
+        <ion-card-subtitle>Rs 80 000.00</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary">
+        <ion-card-header>     
+          <ion-card-title>Total of Special payments</ion-card-title>
+          <ion-card-subtitle>Rs 40 000.00</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          
+        </ion-card-content>
+     </ion-card>  
+
+  
+
+  
+
+  
+  <ion-item *ngFor="let p of amounts">
+      <ion-label >
+        {{p.income}}
+      </ion-label>
+
+      <ion-label >
+        {{p.daily}}
+      </ion-label>
+
+      <ion-label >
+        {{p.special}}
+      </ion-label>
+
+    </ion-item>
+    
+      
+   
+</ion-content>

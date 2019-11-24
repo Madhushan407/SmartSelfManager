@@ -1,0 +1,53 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Smart Self Manager</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content>
+  <ion-button color="success" (click)="gotoMainPage()">Login</ion-button>
+</ion-content> -->
+
+
+<ion-content class="login-content" padding >
+  <ion-row class="logo-row" height-60>
+   
+    
+      Smart Self Manager
+    
+  </ion-row>
+
+  <ion-row class="logo-row2" height-60>
+   
+    
+    
+  
+  </ion-row >
+
+  <ion-list class="loginbox">
+
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+
+  </ion-list>
+
+  <ion-button fill="solid" expand="block" color="dark" (click)="gotoMainPage()">Login</ion-button>
+
+
+  <ion-row class="logo-row2">
+
+  </ion-row>
+
+  <ion-row>
+    <ion-button fill="solid" expand="block" color="light" (click)="gotoRegisterPage()">Register</ion-button>
+  </ion-row>
+  
+</ion-content>

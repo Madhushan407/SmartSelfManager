@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Daily Payment Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime value="1995-04-15" min="1990-02" max="2000"
+      [dayShortNames]="customDayShortNames"
+      displayFormat="DDD. MMM DD, YY"
+      monthShortNames="jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, des"></ion-datetime>
+  </ion-item> -->
+
+
+  <!-- <ion-item>
+      <ion-label>Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+    </ion-item> -->
+    
+
+
+
+
+   
+
+  
+
+
+
+
+ 
+
+
+    <ion-list lines="full">
+      <ion-item>
+        <ion-input required type="text" placeholder="title" [(ngModel)] = "dailyPayment.dpaymenttitle"> </ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-input required type="text" placeholder="describtion" [(ngModel)] = "dailyPayment.dpaymentdec"> </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input required type="number" placeholder="amount" [(ngModel)] = "dailyPayment.dpaymentAmount"> </ion-input>
+        </ion-item>
+  
+        <ion-button expand="full" (click)="saveDailyPayment()">Save Daily Payment</ion-button>
+  
+  
+    </ion-list>
+
+
+</ion-content>

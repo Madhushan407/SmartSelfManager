@@ -1,0 +1,64 @@
+// .pageContent{
+//     background-image: url('images/money.jpg');
+// }
+ion-toolbar{
+  --background :rgba(165, 240, 44, 0.877) ;
+}
+
+
+ion-content{
+    --background : url('images/money.jpg');
+  }
+
+  img{
+    box-sizing: content-box;
+  }
+  
+
+.row1 {
+ height: 30%;
+ border: 20px;
+ border-color: red;
+ margin-bottom: 3%;
+ 
+
+};
+
+.options{
+    color: rgb(27, 26, 26);
+    font-size: 200%;
+    align-items: center;
+    align-content: center;
+    border: 1%;
+};
+
+.row0 {
+    height: 10%;
+};
+
+.col0{
+  //  border-color: red;
+    border: 20px;
+   // color: blue;
+    background-color: white;
+    align-items: center;
+   // padding: 5%;
+    margin: 2%;
+};
+
+.col1{
+    border-color: red;
+    border: 20px;
+   // color: blue;
+    background-color: rgba(165, 240, 44, 0.877) ;
+    text-decoration: none;
+    text-decoration-line: none;
+    align-content: center;
+    align-items: center;
+   // padding: 5%;
+    margin-left: 4%;
+    margin-right: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 60%;
+}

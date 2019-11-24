@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Smart Self Manager</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row class="row0">
+        <ion-col  class="col1">  
+           
+        </ion-col>
+        <ion-col class="col1"></ion-col>
+    </ion-row>
+    <ion-row class="row1">
+        
+          <ion-col  class="col1"> 
+          </ion-col>
+          <ion-col  class="col1">              
+            <p class="titledesign">Record Income</p>            
+          </ion-col>
+          <ion-col  class="col1"> 
+          </ion-col>
+        
+    </ion-row>
+
+
+
+    <!-- <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime value="1995-04-15" min="1990-02" max="2000"
+          [dayShortNames]="customDayShortNames"
+          displayFormat="DDD. MMM DD, YY"
+          monthShortNames="jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, des"></ion-datetime>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label>Time</ion-label>
+          <ion-datetime displayFormat="h:mm A" minuteValues="0,15,30,45"></ion-datetime>
+        </ion-item>
+         -->
+
+
+
+  
+ 
+
+
+
+
+
+
+        <ion-list>
+
+          <ng-container *ngIf="!incomeRecords || incomeRecords.length ==0">
+            <div *ngFor="let n of [0,1,2]" padding>
+              <ion-skeleton-text></ion-skeleton-text>
+              <p>
+                  <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+              </p>
+            </div>
+          </ng-container>
+      
+      
+      
+      
+          <ion-item-sliding *ngFor="let item of incomeRecords">
+            <ion-item lines="inset" button [routerLink]="['/income-record-details',item.id]">
+              <ion-label>
+                {{item.incometitle}}
+                <p>{{item.incomedate | date:'short'}}</p>
+              </ion-label>
+              <!-- <ion-note slot="end" color="primary">{{item.incomeAmount}}</ion-note> -->
+
+              <ion-label slot="end" color="secondary" font-size="80px" aria-label="right" class="amountlbl">Rs. {{item.incomeAmount}}.00</ion-label>
+            </ion-item>  
+      
+            <ion-item-options side="end">
+               <ion-item-option (click)="remove(item)" color="secondary">
+                 check
+                 <ion-icon name="chechmark" slot="end"></ion-icon>
+               </ion-item-option>
+            </ion-item-options>
+      
+          </ion-item-sliding>
+        </ion-list>
+      
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+          <ion-fab-button routerLink="/income-record-details" routerDirection="forward" >
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+      
+        </ion-fab>
+
+
+
+
+<!-- <ion-item>
+  <ion-label>Toggle</ion-label>
+  <ion-toggle slot="end" checked></ion-toggle>
+</ion-item>
+
+<ion-item>
+  <ion-checkbox slot="start" checked></ion-checkbox>
+  <ion-label>Checkbox</ion-label>
+</ion-item> -->
+
+</ion-content>
